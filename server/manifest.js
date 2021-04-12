@@ -70,4 +70,3 @@ module.exports = new Confidence.Store({
         ]
     }
 });
-
