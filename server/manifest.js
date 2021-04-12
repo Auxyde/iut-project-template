@@ -13,14 +13,14 @@ module.exports = new Confidence.Store({
     server: {
         host: 'localhost',
         port: {
-            $env: 'PORT',
+            $param: 'PORT',
             $coerce: 'number',
             $default: 3000
         },
         debug: {
-            $filter: { $env: 'NODE_ENV' },
+            $filter: 'NODE_ENV',
             $default: {
-                log: ['error'],
+                log: ['error', 'start'],
                 request: ['error']
             },
             production: {
@@ -33,9 +33,6 @@ module.exports = new Confidence.Store({
             {
                 plugin: '../lib', // Main plugin
                 options: {}
-            },
-            {
-                plugin: './plugins/swagger'
             },
             {
                 plugin: '@hapipal/schwifty',
@@ -62,7 +59,7 @@ module.exports = new Confidence.Store({
             },
             {
                 plugin: {
-                    $filter: { $env: 'NODE_ENV' },
+                    $filter: 'NODE_ENV',
                     $default: '@hapipal/hpal-debug',
                     production: Toys.noop
                 }
