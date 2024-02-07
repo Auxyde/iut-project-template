@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "@hapi/boom": "9.x.x",
+    "@hapi/inert": "^7.1.0",
     "@hapipal/haute-couture": "4.x.x",
     "@hapipal/schwifty": "6.x.x",
+    "hapi-swagger": "^17.2.1",
     "joi": "17.x.x",
+    "mysql": "^2.18.1",
     "objection": "2.x.x"
   },
   "peerDependencies": {
