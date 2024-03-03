@@ -8,9 +8,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-     "@auxyde/iut-encrypt": "^1.0.0",
+    "@auxyde/iut-encrypt": "^1.0.0",
     "@hapi/boom": "9.x.x",
     "@hapi/inert": "^7.1.0",
+    "@hapi/jwt": "^3.2.0",
     "@hapipal/haute-couture": "4.x.x",
     "@hapipal/schmervice": "^3.0.0",
     "@hapipal/schwifty": "6.x.x",
